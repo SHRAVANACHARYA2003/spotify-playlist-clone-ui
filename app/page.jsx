@@ -18,9 +18,16 @@ export default function Page() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
-    return <div className="page">Loading playlist...</div>;
-  }
+if (loading) {
+  return (
+    <div className="page">
+      <div className="loading-state">
+        Loading playlist...
+      </div>
+    </div>
+  );
+}
+
 
   return (
     <div className="page">
